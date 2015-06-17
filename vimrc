@@ -12,6 +12,7 @@ call vundle#begin() "required
 
 " Load Plugins
 Plugin 'gmarik/Vundle.vim'	" load this first
+Plugin 'bling/vim-airline'	" show open buffers
 Plugin 'flazz/vim-colorschemes'	" color schemes
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
@@ -34,6 +35,11 @@ filetype plugin indent on 	" required
 " Global Options
 let g:go_disable_autoinstall = 0
 let g:neocomplete#enable_at_startup = 1
+
+" Vim-Airline settings
+let g:airline#extensions#tabline#enabled = 1	" enable the list of buffers
+let g:airline#extensions#tabline#fnamemod = ':t'	" show just the filename
+
 " CtrlP settings
 let g:ctrlp_map = '<c-p>'	" map <c-p> to :CtrlP
 let g:ctrlp_cmd = 'CtrlP'
