@@ -8,11 +8,14 @@ mkdir -p ~/.vim/colors
 # Download Vundle
 # Skip if already installed unless -f option is given
 VUNDLE=~/.vim/bundle/Vundle.vim
-VUNDLE_BCKP=~/.vim/bundle/Vundle.vim.backup
 if [[ ! -e $VUNDLE || $1 = "-f" ]]; then
-    rm -fr "$VUNDLE_BCKP"
-    mv $VUNDLE $VUNDLE_BCKP
-    git clone "https://github.com/gmarik/Vundle.vim.git" "$VUNDLE"
+    if [ -d $VUNDLE ]; then
+        cwd=`pwd`
+        cd $VUNDLE && git pull
+        cd $cwd
+    else
+        git clone "https://github.com/gmarik/Vundle.vim.git" "$VUNDLE"
+    fi
 fi
 
 # install configuration
