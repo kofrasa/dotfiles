@@ -3,7 +3,6 @@
 DIR=`dirname $0`
 
 mkdir -p ~/.vim/bundle
-mkdir -p ~/.vim/colors
 
 # Download Vundle
 # Skip if already installed unless -f option is given
@@ -20,7 +19,6 @@ fi
 
 # install configuration
 cat $DIR/vimrc > ~/.vimrc
-cp $DIR/colors/* ~/.vim/colors
 
 # run Vundle installation command
 vim +PluginInstall +qall

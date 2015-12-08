@@ -37,6 +37,7 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plugin 'tpope/vim-surround'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -71,5 +72,5 @@ map <c-n> :NERDTreeToggle<CR>
 map <c-p> :CtrlP<CR>
 
 
-colorscheme molokai
+colorscheme Monokai
 
