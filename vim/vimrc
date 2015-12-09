@@ -46,6 +46,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()               " required
 filetype plugin indent on       " required
+runtime macros/matchit.vim
 
 " Update plugins
 " $ `vim +PluginInstall +qall` or :PluginInstall inside vim
@@ -66,7 +67,7 @@ let g:ctrlp_working_path_mode = 'ra'
 "let g:ctrlp_user_command = 'find %s -type f' 	" custom file listing command
 let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/]\.(git|hg|svn)$',
-  \ 'file': '\v\.(o|so|swp|zip|gz|pyc|class)$'
+  \ 'file': '\v\.(o|so|swp|pyc|class)$'
   \}
 
 " KEY Mappings 
@@ -76,7 +77,7 @@ map <c-n> :NERDTreeToggle<CR>
 " toggle ctrl-p
 map <c-p> :CtrlP<CR>
 " map Ctrl-c to copy in visual mode
-vnoremap <C-c> "*y
+vnoremap <c-c> "*y
 
 colorscheme Monokai
 
