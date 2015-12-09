@@ -5,6 +5,8 @@ set tabstop=4	" size of hard tab stop
 set shiftwidth=4        " size of an indent
 set smarttab	" make 'tab' inset indents instead of tabs
 set expandtab	" always use spaces instead of tab characters
+set clipboard=unnamed   "set the \"* register to the clipboard
+set clipboard=unnamedplus   "set the \"+ register to the clipboard
 
 syntax on
 
@@ -23,7 +25,7 @@ Plugin 'derekwyatt/vim-scala'   " scala plugin
 Plugin 'fatih/vim-go'       "golang plugin
 Plugin 'flazz/vim-colorschemes'     "color schemes
 Plugin 'guns/vim-clojure-static'    "clojure runtime
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'michaeljsmith/vim-indent-object' "add modifier target 'i' for indentation levels
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -73,7 +75,8 @@ let g:ctrlp_custom_ignore = {
 map <c-n> :NERDTreeToggle<CR>
 " toggle ctrl-p
 map <c-p> :CtrlP<CR>
-
+" map Ctrl-c to copy in visual mode
+vnoremap <C-c> "*y
 
 colorscheme Monokai
 
