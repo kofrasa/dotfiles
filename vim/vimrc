@@ -20,10 +20,12 @@ call vundle#begin() "required
 Plugin 'gmarik/Vundle.vim'	" load this first to manage vundle
 Plugin 'bling/vim-airline'	" show open buffers
 Plugin 'derekwyatt/vim-scala'   " scala plugin
-Plugin 'fatih/vim-go'   " golang plugin
-Plugin 'flazz/vim-colorschemes'	" color schemes
-Plugin 'guns/vim-clojure-static'    " clojure runtime
+Plugin 'fatih/vim-go'       "golang plugin
+Plugin 'flazz/vim-colorschemes'     "color schemes
+Plugin 'guns/vim-clojure-static'    "clojure runtime
 Plugin 'kien/ctrlp.vim'
+Plugin 'michaeljsmith/vim-indent-object' "add modifier target 'i' for indentation levels
+Plugin 'nelstrom/vim-textobj-rubyblock' "adds modifier target 'r' for ruby blocks
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-classpath'
@@ -38,6 +40,7 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plugin 'tpope/vim-surround'
+Plugin 'vim-scripts/argtextobj.vim' "adds modifier target 'a' for programming language arguments
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 
 call vundle#end()               " required
