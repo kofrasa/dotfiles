@@ -22,11 +22,10 @@ fi
 echo "installing '$ARG' config..."
 
 if test -f "$BASE/install.sh"; then
-    sh "$BASE/install.sh"
+    exec "$BASE/install.sh"
 else
     for conf in `ls $BASE`; do
         cp "$BASE/$conf" "$HOME/.$conf"
     done
 fi
 
-echo "done"

@@ -21,6 +21,7 @@ call vundle#begin() "required
 " Add Plugins with Vundle
 Plugin 'gmarik/Vundle.vim'	" load this first to manage vundle
 Plugin 'bling/vim-airline'	" show open buffers
+Plugin 'daylerees/colour-schemes',{'rtp':'vim/'}
 Plugin 'derekwyatt/vim-scala'   " scala plugin
 Plugin 'fatih/vim-go'       "golang plugin
 Plugin 'flazz/vim-colorschemes'     "color schemes
@@ -45,6 +46,7 @@ Plugin 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plugin 'tpope/vim-surround'
 Plugin 'vim-scripts/argtextobj.vim' "adds modifier target 'a' for programming language arguments
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'zenorocha/dracula-theme',{'rtp':'vim/'}
 
 call vundle#end()               " required
 filetype plugin indent on       " required
@@ -81,5 +83,5 @@ map <c-p> :CtrlP<CR>
 " map Ctrl-c to copy in visual mode
 vnoremap <c-c> "*y
 
-colorscheme Monokai
+colorscheme dracula
 
