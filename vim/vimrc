@@ -21,7 +21,6 @@ call vundle#begin() "required
 " Add Plugins with Vundle
 Plugin 'gmarik/Vundle.vim'	" load this first to manage vundle
 Plugin 'bling/vim-airline'	" show open buffers
-Plugin 'daylerees/colour-schemes',{'rtp':'vim/'}
 Plugin 'derekwyatt/vim-scala'   " scala plugin
 Plugin 'fatih/vim-go'       "golang plugin
 Plugin 'flazz/vim-colorschemes'     "color schemes
