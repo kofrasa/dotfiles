@@ -3,6 +3,7 @@ set -e
 
 DIR=`dirname $0`
 ARG=$1
+shift
 OPT=`ls $DIR | grep -v 'install.sh' | sort`
 
 # validate directory
@@ -22,7 +23,7 @@ fi
 echo "installing '$ARG' config..."
 
 if test -f "$BASE/install.sh"; then
-    exec "$BASE/install.sh"
+    exec "$BASE/install.sh" $@
 else
     for conf in `ls $BASE`; do
         cp "$BASE/$conf" "$HOME/.$conf"

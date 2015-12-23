@@ -43,6 +43,7 @@ Plugin 'tpope/vim-salve'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plugin 'tpope/vim-surround'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/argtextobj.vim' "adds modifier target 'a' for programming language arguments
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'zenorocha/dracula-theme',{'rtp':'vim/'}
