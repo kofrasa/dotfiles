@@ -1,12 +1,13 @@
 
 " Vim Options
+set backspace=indent,eol,start
+set clipboard=unnamed   "set the \"* register to the clipboard
+set expandtab	" always use spaces instead of tab characters
+set clipboard=unnamedplus   "set the \"+ register to the clipboard
 set number	" show line number
-set tabstop=4	" size of hard tab stop
 set shiftwidth=4        " size of an indent
 set smarttab	" make 'tab' inset indents instead of tabs
-set expandtab	" always use spaces instead of tab characters
-set clipboard=unnamed   "set the \"* register to the clipboard
-set clipboard=unnamedplus   "set the \"+ register to the clipboard
+set tabstop=4	" size of hard tab stop
 
 syntax on
 
@@ -80,8 +81,8 @@ let g:ctrlp_custom_ignore = {
 map <c-n> :NERDTreeToggle<CR>
 " toggle ctrl-p
 map <c-p> :CtrlP<CR>
-" map Ctrl-c to copy in visual mode
-vnoremap <c-c> "*y
+" map Ctrl-c to copy to clipboard
+vnoremap <c-c> "+y
 
 colorscheme dracula
 
