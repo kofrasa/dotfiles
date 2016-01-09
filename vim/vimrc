@@ -1,3 +1,7 @@
+set nocompatible
+
+" Install plugins
+source $HOME/.vim/plug.vim
 
 " Vim Options
 set number	" show line number
@@ -10,51 +14,11 @@ set clipboard=unnamedplus   "set the \"+ register to the clipboard
 
 syntax on
 
-" Setup Vundle
-" $ `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
-set nocompatible
+
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-
-call vundle#begin() "required
-
-" Add Plugins with Vundle
-Plugin 'gmarik/Vundle.vim'	" load this first to manage vundle
-Plugin 'bling/vim-airline'	" show open buffers
-Plugin 'derekwyatt/vim-scala'   " scala plugin
-Plugin 'fatih/vim-go'       "golang plugin
-Plugin 'flazz/vim-colorschemes'     "color schemes
-Plugin 'guns/vim-clojure-static'    "clojure runtime
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'michaeljsmith/vim-indent-object' "add modifier target 'i' for indentation levels
-Plugin 'msanders/snipmate.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-classpath'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-fireplace'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-pathogen'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-salve'
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
-Plugin 'tpope/vim-surround'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/argtextobj.vim' "adds modifier target 'a' for programming language arguments
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'zenorocha/dracula-theme',{'rtp':'vim/'}
-
-call vundle#end()               " required
 filetype plugin indent on       " required
 runtime macros/matchit.vim
 
-" Update plugins
-" $ `vim +PluginInstall +qall` or :PluginInstall inside vim
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Global Options
 let g:go_disable_autoinstall = 0

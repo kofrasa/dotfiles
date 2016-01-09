@@ -2,33 +2,14 @@
 
 DIR=`dirname $0`
 
-mkdir -p ~/.vim/bundle
-
-# Download Vundle
-# Skip if already installed unless -f option is given
-VUNDLE=~/.vim/bundle/Vundle.vim
-if [[ ! -e $VUNDLE || $1 = "-f" ]]; then
-    if [ -d $VUNDLE ]; then     
-        cd $VUNDLE && git pull
-        cd $DIR
-    else
-        git clone "https://github.com/gmarik/Vundle.vim.git" "$VUNDLE"
-    fi
-fi
+PLUG=$HOME/.vim/autoload/plug.vim
+if [ ! -f $PLUG ]; then
+  curl -fLo $PLUG --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+fi  
 
 # install configuration
-cat $DIR/vimrc > ~/.vimrc
-
-# run Vundle installation command
-vim +PluginInstall +qall
-
-if [[ $1 = '-f' ]]; then
-    echo -n "Compile and install YouCompleteMe: y/n: "
-    read y
-    if [[ $y == 'y' ]]; then
-        cd ~/.vim/bundle/YouCompleteMe
-        ./install.py --clang-completer
-    fi
-fi
+cp $DIR/plug.vim ~/.vim/plug.vim
+cp $DIR/vimrc ~/.vimrc
+vim +PlugInstall +qall
 
 cd $DIR
