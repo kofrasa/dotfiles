@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 DIR=`dirname $0`
-PWD=`pwd`
 
 mkdir -p ~/.vim/bundle
 
@@ -10,9 +9,8 @@ mkdir -p ~/.vim/bundle
 VUNDLE=~/.vim/bundle/Vundle.vim
 if [[ ! -e $VUNDLE || $1 = "-f" ]]; then
     if [ -d $VUNDLE ]; then     
-        cd $VUNDLE 
-        git pull
-        cd -
+        cd $VUNDLE && git pull
+        cd $DIR
     else
         git clone "https://github.com/gmarik/Vundle.vim.git" "$VUNDLE"
     fi
@@ -33,4 +31,4 @@ if [[ $1 = '-f' ]]; then
     fi
 fi
 
-cd $PWD
+cd $DIR
