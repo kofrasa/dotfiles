@@ -47,6 +47,10 @@ Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 
+" VCS
+Plug 'airblade/vim-gitgutter', { 'for': 'git' }
+Plug 'mhinz/vim-signify', { 'for': ['subversion', 'mercurial'] }
+
 " Completion
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': ['python','php','ruby','java','scala','go'] }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
