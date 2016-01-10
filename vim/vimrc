@@ -6,20 +6,51 @@ source $HOME/.vim/plug.vim
 " Vim Options
 set backspace=indent,eol,start
 set clipboard=unnamed   "set the \"* register to the clipboard
-set expandtab	" always use spaces instead of tab characters
 set clipboard=unnamedplus   "set the \"+ register to the clipboard
 set number	" show line number
 set shiftwidth=4        " size of an indent
 set smarttab	" make 'tab' inset indents instead of tabs
 set tabstop=4	" size of hard tab stop
+set softtabstop=4
+set expandtab	" always use spaces instead of tab characters
+set modelines=0
+set encoding=utf-8
+set scrolloff=3
+set autoindent
+set showmode
+set showcmd
+set hidden
+set wildmenu
+set wildmode=list:longest
+set visualbell
+set cursorline
+set ttyfast
+set ruler
+set laststatus=2
+"set relativenumber
+set undofile
+
+" Fix vim default regex searching
+nnoremap / /\v
+vnoremap / /\v
+set ignorecase
+set smartcase
+" set gdefault
+set incsearch
+set showmatch
+set hlsearch
+
+" Handle long lines
+set wrap
+set textwidth=80
+set formatoptions=qrn1
+set colorcolumn=100
 
 syntax on
-
 
 filetype off
 filetype plugin indent on       " required
 runtime macros/matchit.vim
-
 
 " Global Options
 let g:go_disable_autoinstall = 0
@@ -41,12 +72,30 @@ let g:ctrlp_custom_ignore = {
 
 " KEY Mappings 
 """"""""""""""""
+let mapleader = ","
 " toggle nerd tree
 map <c-n> :NERDTreeToggle<CR>
 " toggle ctrl-p
 map <c-p> :CtrlP<CR>
 " map Ctrl-c to copy to clipboard
 vnoremap <c-c> "+y
+
+" disable arrow keys in normal/insert mode: use h,j,k,l
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+nnoremap j gj
+nnoremap k gk
+" map arrows to switching windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 colorscheme dracula
 

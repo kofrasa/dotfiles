@@ -16,11 +16,11 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'guns/vim-clojure-static'    "clojure runtime
 Plug 'msanders/snipmate.vim'
-Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fireplace'
+Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 Plug 'tpope/vim-salve'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
@@ -48,8 +48,9 @@ Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 
 " Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': ['python','php','ruby','java','scala','go'] }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Make % match xml tags
 Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
@@ -128,7 +129,7 @@ Plug 'reedes/vim-pencil'
 
 " Visualize undo tree
 Plug 'mbbill/undotree'
-
+Plug 'sjl/gundo.vim'
 Plug 'parkr/vim-jekyll'
 
 
