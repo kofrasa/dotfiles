@@ -40,7 +40,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }     
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'xsbeats/vim-blade', { 'for': 'blade' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
@@ -90,8 +89,6 @@ Plug 'bkad/CamelCaseMotion'
 
 " Split and join lines of code intelligently
 Plug 'AndrewRadev/splitjoin.vim'
-
-Plug 'gcmt/taboo.vim'
 
 " Split navigation that works with tmux
 Plug 'christoomey/vim-tmux-navigator'
