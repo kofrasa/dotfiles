@@ -42,17 +42,16 @@ Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }     
 Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 Plug 'xsbeats/vim-blade', { 'for': 'blade' }
-Plug 'qrps/lilypond-vim', { 'for': 'lilypond' }
 Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 
 " VCS
 Plug 'airblade/vim-gitgutter', { 'for': 'git' }
-Plug 'mhinz/vim-signify', { 'for': ['subversion', 'mercurial'] }
+Plug 'mhinz/vim-signify'
 
 " Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py', 'for': ['python','php','ruby','java','scala','go'] }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --omnisharp-completer', 'for': ['php','ruby','java','scala','go'] }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
@@ -134,7 +133,6 @@ Plug 'reedes/vim-pencil'
 " Visualize undo tree
 Plug 'mbbill/undotree'
 Plug 'sjl/gundo.vim'
-Plug 'parkr/vim-jekyll'
 
 
 " Other plugins require curl

@@ -70,6 +70,12 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(o|so|swp|pyc|class)$'
   \}
 
+" Signify
+let g:signify_vcs_list = [ 'hg', 'svn' ]
+
+" YouCompleteMe
+let g:ycm_min_num_of_chars_for_completion = 10
+
 " KEY Mappings 
 """"""""""""""""
 let mapleader = ","
@@ -80,22 +86,6 @@ map <c-p> :CtrlP<CR>
 " map Ctrl-c to copy to clipboard
 vnoremap <c-c> "+y
 
-" disable arrow keys in normal/insert mode: use h,j,k,l
-"nnoremap <up> <nop>
-"nnoremap <down> <nop>
-"nnoremap <left> <nop>
-"nnoremap <right> <nop>
-"inoremap <up> <nop>
-"inoremap <down> <nop>
-"inoremap <left> <nop>
-"inoremap <right> <nop>
-"nnoremap j gj
-"nnoremap k gk
-" map arrows to switching windows
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
 
 colorscheme dracula
 
