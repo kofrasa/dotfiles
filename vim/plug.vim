@@ -20,7 +20,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-classpath'
 Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+Plug 'tpope/vim-fireplace', { 'for': ['clj','cljs','cljx','clojure'] }
 Plug 'tpope/vim-salve'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
@@ -37,7 +37,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'NLKNguyen/papercolor-theme'
 
 " Syntax
-Plug 'tpope/vim-git', { 'for': 'git' }
+Plug 'tpope/vim-git'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }     
 Plug 'xsbeats/vim-blade', { 'for': 'blade' }
@@ -45,7 +45,7 @@ Plug 'plasticboy/vim-markdown', { 'for': ['md', 'markdown'] }
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 
 " VCS
-Plug 'airblade/vim-gitgutter', { 'for': 'git' }
+Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 
 " Completion
@@ -60,7 +60,7 @@ Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
 Plug 'ervandew/supertab'
 
 " Syntastic: Code linting errors
-Plug 'scrooloose/syntastic', { 'for': ['php', 'python', 'javascript', 'css'] }
+Plug 'scrooloose/syntastic', { 'for': ['java', 'scala', 'ruby', 'php', 'python', 'javascript', 'css'] }
 
 " Pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
@@ -127,16 +127,6 @@ Plug 'reedes/vim-pencil'
 Plug 'mbbill/undotree'
 Plug 'sjl/gundo.vim'
 
-
-" Other plugins require curl
-if executable("curl")
-
-    " Webapi: Dependency of Gist-vim
-    Plug 'mattn/webapi-vim'
-
-    " Gist: Post text to gist.github
-    Plug 'mattn/gist-vim'
-endif
 
 filetype plugin indent on                   " required!
 call plug#end()
