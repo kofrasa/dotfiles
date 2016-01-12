@@ -75,6 +75,7 @@ let g:signify_vcs_list = [ 'hg', 'svn' ]
 
 " YouCompleteMe
 let g:ycm_min_num_of_chars_for_completion = 10
+let g:ycm_autoclose_preview_window_after_completion = 1
 
 " KEY Mappings 
 """"""""""""""""
@@ -85,7 +86,8 @@ map <c-n> :NERDTreeToggle<CR>
 map <c-p> :CtrlP<CR>
 " map Ctrl-c to copy to clipboard
 vnoremap <c-c> "+y
-
+" map <leader>g to jump to definition
+nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 colorscheme dracula
 
