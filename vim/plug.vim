@@ -50,7 +50,7 @@ Plug 'airblade/vim-gitgutter', { 'for': 'git' }
 Plug 'mhinz/vim-signify'
 
 " Completion
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --omnisharp-completer', 'for': ['php','ruby','java','scala','go'] }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --omnisharp-completer', 'for': ['python','ruby','java','scala','go','php'] }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
@@ -112,9 +112,6 @@ Plug 'tpope/vim-fugitive'
 
 " Run Python tests in tmux splits
 Plug 'benmills/vimux', { 'for': ['python', 'javascript'] }
-
-" Python completion and tag navigation
-Plug 'davidhalter/jedi-vim', { 'for': 'python' }
 
 " Take notes and keep todo lists in vim
 Plug 'vimwiki/vimwiki'
