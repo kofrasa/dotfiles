@@ -41,8 +41,7 @@ Plug 'tpope/vim-git', { 'for': 'git' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }     
 Plug 'xsbeats/vim-blade', { 'for': 'blade' }
-Plug 'plasticboy/vim-markdown', { 'for': 'markdown' }
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+Plug 'plasticboy/vim-markdown', { 'for': ['md', 'markdown'] }
 Plug 'tpope/vim-rails', {'for': 'ruby'}
 
 " VCS
