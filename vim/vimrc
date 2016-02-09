@@ -15,7 +15,6 @@ set softtabstop=4
 set expandtab	" always use spaces instead of tab characters
 set encoding=utf-8
 set modelines=0
-set paste
 set scrolloff=3
 set autoindent
 set showmode
@@ -30,6 +29,10 @@ set ruler
 set laststatus=2
 "set relativenumber
 set undofile
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
 
 " Fix vim default regex searching
 nnoremap / /\v
@@ -63,7 +66,7 @@ let g:airline#extensions#tabline#enabled = 1	" enable the list of buffers
 let g:airline#extensions#tabline#fnamemod = ':t'	" show just the filename
 
 " CtrlP settings
-let g:ctrlp_cmd = 'CtrlP'	" command for :CtrlP
+let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 "let g:ctrlp_user_command = 'find %s -type f' 	" custom file listing command
 let g:ctrlp_custom_ignore = {
@@ -80,6 +83,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_loc_list_height = 5
 
 " Signify
 let g:signify_vcs_list = [ 'hg', 'svn' ]
@@ -91,7 +95,9 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 " KEY Mappings 
 """"""""""""""""
 let mapleader = ";"
-inoremap <tab> <tab>
+
+nnoremap W :w<cr>
+
 " clear highlights
 nnoremap <leader><space> :noh<cr>
 " toggle nerd tree
