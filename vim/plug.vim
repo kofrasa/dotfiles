@@ -29,12 +29,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 " Colorschemes
 Plug 'flazz/vim-colorschemes'     "color schemes
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
-Plug 'captbaritone/molokai'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'altercation/vim-colors-solarized'
-Plug 'fxn/vim-monochrome'
-Plug 'chriskempson/base16-vim'
-Plug 'NLKNguyen/papercolor-theme'
 
 " Syntax
 Plug 'tpope/vim-git'
