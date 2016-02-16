@@ -27,7 +27,9 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorschemes
-Plug 'flazz/vim-colorschemes'     "color schemes
+Plug 'chriskempson/base16-vim'
+Plug 'flazz/vim-colorschemes'     
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 " Syntax
