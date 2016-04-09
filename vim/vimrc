@@ -47,9 +47,9 @@ set hlsearch
 
 " Handle long lines
 set wrap
-set textwidth=80
+set textwidth=100
 set formatoptions=qrn1
-set colorcolumn=100
+set colorcolumn=120
 hi ColorColumn ctermbg=7
 
 syntax on
@@ -86,6 +86,9 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 let g:syntastic_loc_list_height = 5
+let g:syntastic_aggregate_errors = 1
+
+let g:syntastic_javascript_checkers = ['jslint']
 
 " Signify
 let g:signify_vcs_list = [ 'hg', 'svn' ]
@@ -95,30 +98,30 @@ let g:ycm_min_num_of_chars_for_completion = 10
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Paper Color theme
-let g:PaperColor_Dark_Override = { 'background' : '#1c1c1c', 'cursorline' : '#abcdef', 'matchparen' : '#3a3a3a', 'comment' : '#5f875f' }
-let g:PaperColor_Light_Override = { 'background' : '#abcdef', 'cursorline' : '#dfdfff', 'matchparen' : '#d6d6d6' , 'comment' : '#8e908c' }
-" let g:airline_theme = 'PaperColor'
-" let g:lightline = { 'colorshceme': 'PaperColor' }
+let g:airline_theme = 'PaperColor'
+let g:lightline = { 'colorshceme': 'PaperColor' }
 
 " KEY Mappings 
 """"""""""""""""
 let mapleader = ";"
 
-nnoremap W :w<cr>
-
 " clear highlights
 nnoremap <leader><space> :noh<cr>
 " toggle nerd tree
-map <c-n> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 " toggle ctrl-p
-map <c-p> :CtrlP<CR>
+map <C-p> :CtrlP<CR>
 " map Ctrl-c to copy to clipboard
-vnoremap <c-c> "+y
+vnoremap <C-c> "+y
 " map <leader>g to jump to definition
 nnoremap <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " toggle syntastic
-nnoremap <leader>sc :SyntasticCheck
-nnoremap <leader>sr :SyntasticReset
+map <leader>sc :SyntasticCheck
+map <leader>sr :SyntasticReset
 
-colorscheme dracula
+" Switch CWD to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>:pwd<cr>
+
+set background=dark
+colorscheme PaperColor
 

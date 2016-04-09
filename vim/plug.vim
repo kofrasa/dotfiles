@@ -27,8 +27,6 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Colorschemes
-Plug 'chriskempson/base16-vim'
-Plug 'flazz/vim-colorschemes'     
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
@@ -56,7 +54,7 @@ Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
 Plug 'ervandew/supertab'
 
 " Syntastic: Code linting errors
-Plug 'scrooloose/syntastic', { 'for': ['java', 'scala', 'ruby', 'php', 'python', 'javascript', 'css'] }
+Plug 'scrooloose/syntastic', { 'for': [ 'c', 'cpp', 'cs', 'java', 'scala', 'clojure', 'go', 'sql', 'xml', 'sh', 'ruby', 'php', 'python', 'javascript', 'json', 'css', 'html', 'markdown' ] }
 
 " Pairs of handy bracket mappings
 Plug 'tpope/vim-unimpaired'
