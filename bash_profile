@@ -12,16 +12,30 @@ export GOBIN="$GOPATH/bin"
 if [ $PLATFORM = Darwin ]; then
   export ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse
   export ANDROID_HOME=$HOME/Library/android/sdk
+
+  GNUTOOLS=/usr/local/opt/coreutils/libexec/gnubin
+
+  # update path
+  export PATH="$GNUTOOLS:$PATH:$HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ACTIVATOR_HOME"
+  export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+  # Postgres
+  PGDATA=/usr/local/var/postgres
+  alias pg-start='pg_ctl start -D $PGDATA > /dev/null'
+  alias pg-stop='pg_ctl stop -D $PGDATA'
+
+  # MongoDB
+  MONGO_CONF=/usr/local/etc/mongod.conf
+  alias start-mongod='mongod -f $MONGO_CONF'
+
+  # hide and show hidden files
+  alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+  alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 fi
 
 # variables 
 ACTIVATOR_HOME=/opt/activator-1.3.5-minimal
 PYENV="$HOME/.pyenv"
-GNUTOOLS=/usr/local/opt/coreutils/libexec/gnubin
-
-# update path
-export PATH="$GNUTOOLS:$PATH:$HOME/bin:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$ACTIVATOR_HOME"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export NODE_PATH=/usr/local/lib/node_modules/
 
 for conf in profile bash_aliases; do

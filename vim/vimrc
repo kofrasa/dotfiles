@@ -26,6 +26,7 @@ set visualbell
 set cursorline
 set ttyfast
 set ruler
+set paste
 set laststatus=2
 "set relativenumber
 set undofile
