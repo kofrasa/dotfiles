@@ -26,11 +26,11 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sexp-mappings-for-regular-people' " mapping s-expressions
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Colorschemes
+""" Colorschemes
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
-" Syntax
+""" Syntax
 Plug 'tpope/vim-git'
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'fatih/vim-go', { 'for': 'go' }     
@@ -42,7 +42,7 @@ Plug 'tpope/vim-rails', {'for': 'ruby'}
 Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 
-" Completion
+""" Completion
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-completer --omnisharp-completer', 'for': ['python','ruby','java','scala','go','php'] }
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -66,8 +66,6 @@ Plug 'bling/vim-airline'
 " Plug 'kien/ctrlp.vim' <-- Not maintained any more
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'rking/ag.vim'
-
 " Rename files from within vim
 Plug 'tpope/vim-eunuch'
 
@@ -77,9 +75,6 @@ Plug 'tpope/vim-commentary'
 " Adjust 'shiftwidth' and 'expandtab' heuristically based on the current file
 Plug 'tpope/vim-sleuth'
 
-" CamelCase motions through words
-Plug 'bkad/CamelCaseMotion'
-
 " Split and join lines of code intelligently
 Plug 'AndrewRadev/splitjoin.vim'
 
@@ -88,26 +83,23 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " Change brackets and quotes
 Plug 'tpope/vim-surround'
+
 " Make vim-surround repeatable with .
 Plug 'tpope/vim-repeat'
 
-" Custom motions
+""" Custom motions
 
 " Indent object
 Plug 'michaeljsmith/vim-indent-object'
+
 " Camel Case object
 Plug 'bkad/CamelCaseMotion'
-" Argumetn object
+
+" Argument object
 Plug 'vim-scripts/argtextobj.vim'
 
 " Fugitive: Git from within Vim
 Plug 'tpope/vim-fugitive'
-
-" Run Python tests in tmux splits
-Plug 'benmills/vimux', { 'for': ['python', 'javascript'] }
-
-" Take notes and keep todo lists in vim
-Plug 'vimwiki/vimwiki'
 
 " Find the class/method based on cursor position
 Plug 'vim-scripts/pythonhelper'
@@ -119,8 +111,6 @@ Plug 'reedes/vim-pencil'
 
 " Visualize undo tree
 Plug 'mbbill/undotree'
-Plug 'sjl/gundo.vim'
-
 
 filetype plugin indent on                   " required!
 call plug#end()
