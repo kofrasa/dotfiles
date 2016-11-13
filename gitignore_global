@@ -5,3 +5,5 @@
 *.exe
 *.py[cod]
 *.class
+*.ipr
+*.iml
