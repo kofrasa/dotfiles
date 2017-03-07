@@ -8,10 +8,10 @@ set backspace=indent,eol,start
 set clipboard=unnamed   "set the \"* register to the clipboard
 set clipboard=unnamedplus   "set the \"+ register to the clipboard
 set number	" show line number
-set shiftwidth=4        " size of an indent
+set shiftwidth=2        " size of an indent
 set smarttab	" make 'tab' inset indents instead of tabs
-set tabstop=4	" size of hard tab stop
-set softtabstop=4
+set tabstop=2	" size of hard tab stop
+set softtabstop=2
 set expandtab	" always use spaces instead of tab characters
 set encoding=utf-8
 set modelines=0
@@ -105,8 +105,8 @@ let g:ycm_min_num_of_chars_for_completion = 10
 let g:ycm_autoclose_preview_window_after_completion = 1
 
 " Paper Color theme
-let g:airline_theme = 'PaperColor'
-let g:lightline = { 'colorshceme': 'PaperColor' }
+let g:airline_theme = 'molokai'
+let g:lightline = { 'colorscheme': 'molokai' }
 
 " KEY Mappings 
 """"""""""""""""
@@ -130,5 +130,4 @@ map <leader>sr :SyntasticReset
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 set background=dark
-colorscheme PaperColor
 

@@ -47,9 +47,6 @@ Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --gocode-
 Plug 'mattn/emmet-vim', { 'for': 'html' }
 Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 
-" Make % match xml tags
-Plug 'edsono/vim-matchit', { 'for': ['html', 'xml'] }
-
 " Make tab handle all completions
 Plug 'ervandew/supertab'
 
@@ -60,7 +57,8 @@ Plug 'scrooloose/syntastic', { 'for': [ 'c', 'cpp', 'cs', 'java', 'scala', 'cloj
 Plug 'tpope/vim-unimpaired'
 
 " Fancy statusline
-Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Fuzzy file opener
 " Plug 'kien/ctrlp.vim' <-- Not maintained any more
