@@ -16,6 +16,8 @@ install() {
         cd $arg
         source ./install.sh
         cd $DIR
+    elif [ -x $arg ]; then
+	. $arg
     elif [ -f $arg ]; then
         cp "$arg" "$HOME/.$arg"
     fi
