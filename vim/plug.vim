@@ -99,9 +99,6 @@ Plug 'vim-scripts/argtextobj.vim'
 " Fugitive: Git from within Vim
 Plug 'tpope/vim-fugitive'
 
-" Find the class/method based on cursor position
-Plug 'vim-scripts/pythonhelper'
-
 " 'Vastly improved Javascript indentation and syntax support in Vim'
 Plug 'pangloss/vim-javascript'
 
